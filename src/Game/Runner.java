@@ -13,7 +13,7 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		Room[][] building = new Room[5][5];
+		Room[][] building = new Room[10][10];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
@@ -28,7 +28,7 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
-		 
+
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
 		building[0][0].enterRoom(player1);
@@ -52,7 +52,7 @@ public class Runner {
 	}
 
 	/**
-	 * Checks that the movement chosen is within the valid game map.
+	 * Checks that the movement chosen is within the game map coordinates
 	 * @param move the move chosen
 	 * @param p person moving
 	 * @param map the 2D array of rooms
@@ -118,7 +118,4 @@ public class Runner {
 	{
 		gameOn = false;
 	}
-	
-
-
 }

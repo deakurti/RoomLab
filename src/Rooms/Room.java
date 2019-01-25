@@ -19,7 +19,9 @@ public class Room
      */
     public void enterRoom(Person x)
     {
-        System.out.println("You enter a plain room");
+        System.out.println("Hello.");
+        System.out.println("You enter a plain room.");
+        System.out.println("You cannot move North or West on your first turn.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
